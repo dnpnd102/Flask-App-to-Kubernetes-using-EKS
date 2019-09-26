@@ -1,4 +1,5 @@
----
+# Project:              Deploy Your Flask App to Kubernetes Using EKS
+# Student:              Dinanath pandey
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: EKSWSV1
@@ -9,7 +10,7 @@ Parameters:
   EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
-    Default: 
+    Default: simplified-jwt-api
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
@@ -17,7 +18,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: 
+    Default: Flask-App-to-Kubernetes-using-EKS
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -40,7 +41,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default:
+    Default: KaranPupneja
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -56,7 +57,7 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: 
+    Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
@@ -89,7 +90,7 @@ Metadata:
       GitHubUser:
         default: dnpnd102
       GitHubToken:
-        default: e7b1ff18d140f680d4d258918c7cc1749e02a9f1
+        default: Access token
       GitSourceRepo:
         default: Flask-App-to-Kubernetes-using-EKS
       GitBranch:
