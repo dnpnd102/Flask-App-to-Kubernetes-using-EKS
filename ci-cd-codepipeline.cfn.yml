@@ -41,7 +41,7 @@ Parameters:
   GitHubUser:
     Type: String
     Default: dnpnd102
-    Description: GitHub username or organization
+    Description: GitHub username
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
